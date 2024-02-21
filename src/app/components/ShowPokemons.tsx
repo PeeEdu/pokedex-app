@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type PokemonProps = {
   pokemons?: {
@@ -21,14 +22,15 @@ export default function ShowPokemons({ pokemons }: PokemonProps) {
           <ul className="flex flex-wrap w-full justify-around mt-5">
             {allPokemons &&
               allPokemons.map((pokemon, index) => (
-                <div className="flex flex-col items-center w-2/12 mx-3 my-3 bg-[#f1f1f1] shadow-2xl" id={`${index + 1}`}>
+                <div className="flex flex-col items-center w-2/12 mx-3 my-3 bg-[#f1f1f1] shadow-2xl hover:scale-110 transition-transform duration-300 ease-in-out" id={`${index + 1}`}>
+                  <Link href={`/${pokemon.name}/${String(index + 1).padStart(3, "0")}`}>
                   <div className="bg-[#a5a5a5] mt-3">
                     <Image
                     src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${String(index + 1).padStart(3, "0")}.png`}    
                       alt={`Pokemon number: ${index}`}
                       width={180}
                       height={180}
-                      priority={false}
+                      priority={true}
                     />
                   </div>
                   <li
@@ -48,6 +50,8 @@ export default function ShowPokemons({ pokemons }: PokemonProps) {
 
                     </p>
                   </li>
+                  </Link>
+                  
                 </div>
               ))}
           </ul>

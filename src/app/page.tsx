@@ -26,7 +26,7 @@ export default async function Page() {
   return (
     <>
       <div className="my-9">
-        <h1 className="text-center text-2xl font-semibold">
+        <h1 className="text-center text-2xl font-semibold text-[#ffffff]">
           List Of 999 Pokemons:
         </h1>
       </div>

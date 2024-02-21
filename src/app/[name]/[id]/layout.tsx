@@ -14,7 +14,9 @@ export default function DashboardLayout({
 }) {
   return (
     <>
+    <div className="max-w-[1300px] mx-auto bg-[#e7e7e7] py-4 px-7 my-9">
       <section>{children}</section>
+    </div>
     </>
   );
 }
