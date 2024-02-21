@@ -6,7 +6,7 @@ import ShowPokemons from "./components/ShowPokemons"
 export default async function Page() {
 
     async function catchPokemons (){
-        const pokemons = api.get('/pokemon?limit=100000&offset=0').then((response)=>{
+        const pokemons = api.get('/pokemon?limit=999&offset=0').then((response)=>{
             return response.data
         }).catch((error)=>{
             console.log(error)
