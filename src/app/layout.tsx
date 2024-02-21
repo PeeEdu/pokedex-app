@@ -1,5 +1,6 @@
 import { Press_Start_2P } from "next/font/google";
 import "./globals.css";
+import { Metadata } from "next";
 
 const PressStart = Press_Start_2P({
   weight: "400",
@@ -7,6 +8,11 @@ const PressStart = Press_Start_2P({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: 'Pokedex',
+  description: 'Gotta Catch Em All',
+}
 
 export default function DashboardLayout({
   children,

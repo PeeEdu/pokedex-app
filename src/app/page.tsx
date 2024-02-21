@@ -3,6 +3,8 @@ import api from "./services/api"
 import ShowPokemons from "./components/ShowPokemons"
 
 
+
+
 export default async function Page() {
 
     async function catchPokemons (){
