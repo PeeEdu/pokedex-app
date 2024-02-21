@@ -1,5 +1,4 @@
 import { Press_Start_2P } from "next/font/google";
-import './globals.css'
 
 const PressStart = Press_Start_2P({
   weight: "400",
@@ -15,10 +14,7 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <div className={` flex justify-center bg-[#11083a] py-6`}>
-        <h1 className={`${PressStart.className} text-[#FFFF00] stroke-[#054F77] text-3xl`}>PokeDex</h1>
-      </div>
-       <section>{children}</section>
+      <section>{children}</section>
     </>
   );
 }
