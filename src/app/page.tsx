@@ -21,7 +21,6 @@ export default async function Page() {
     return (
         <>
             <ShowPokemons pokemons={pokemons}/>
-            <h1>teste</h1>
         </>
     )
 }
