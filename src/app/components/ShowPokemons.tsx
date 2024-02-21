@@ -3,7 +3,7 @@ import Image from "next/image";
 
 type PokemonProps = {
   pokemons?: {
-    results: { name: string }[];
+    results: { name: string  }[];
   };
 };
 
@@ -12,17 +12,12 @@ export default function ShowPokemons({ pokemons }: PokemonProps) {
 
   return (
     <>
-      <div className="max-w-[1300px] mx-auto">
-        <div className="mt-9">
-          <h1 className="text-center text-2xl font-semibold">
-            List Of 999 Pokemons:
-          </h1>
-        </div>
+      <div className="max-w-[1300px] mx-auto bg-[#e7e7e7] py-4 px-7">
         <div>
           <ul className="flex flex-wrap w-full justify-around mt-5">
             {allPokemons &&
               allPokemons.map((pokemon, index) => (
-                <div className="flex flex-col items-center w-2/12 mx-3 my-3 bg-[#f2f2f2]">
+                <div className="flex flex-col items-center w-2/12 mx-3 my-3 bg-[#f1f1f1] shadow-2xl">
                   <div className="bg-[#a5a5a5] mt-3">
                     <Image
                       src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${(
