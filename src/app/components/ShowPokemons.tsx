@@ -37,7 +37,7 @@ export default function ShowPokemons({ pokemons }: PokemonProps) {
                     key={index}
                   >
                     <p className="font-medium text-sm text-[#747474] w-full px-4 pt-2">
-                    {(
+                    #{(
                         "0000" +
                         (index + 1)
                       ).slice(-4)}

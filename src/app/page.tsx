@@ -19,18 +19,7 @@ export default async function Page() {
   }
 
 
-  const pokemonType = async (nameOfPokemon: string) =>{
-    const pokemonType = api
-      .get(`/pokemon/${nameOfPokemon}`)
-      .then((response) => {
-        console.log(response.data.types);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-
-    return pokemonType;
-  }
+  
 
   const pokemons = await catchPokemons();
 
@@ -41,7 +30,7 @@ export default async function Page() {
           List Of 999 Pokemons:
         </h1>
       </div>
-      <ShowPokemons pokemons={pokemons} />
+      <ShowPokemons pokemons={pokemons}/>
     </>
   );
 }
