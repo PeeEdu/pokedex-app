@@ -1,4 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['assets.pokemon.com'],
+    },
+};
 
 export default nextConfig;
